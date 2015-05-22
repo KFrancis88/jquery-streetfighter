@@ -44,7 +44,7 @@ $(document).ready(function () {
 //Ryu Leaves the "Cool position when the "x" key is released
 	.keyup(function(event) {
 		if (event.which == 88) {
-		$('.ryu-ready').show();
+		$('.ryu-still').show();
 		$('.ryu-cool').hide();  
 	  }
 	});
