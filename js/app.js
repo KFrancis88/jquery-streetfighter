@@ -26,13 +26,11 @@ $(document).ready(function () {
     	});
 	})
 
-//Ryu returns to the "Still" positon when the mouse button is released
+//Ryu returns to the "Ready" positon when the mouse button is released
 	.mouseup(function() {
 		$('.ryu-ready').show();
 		$('.ryu-throwing').hide();
 	});
-
-
 
 //Pressing the "x" key moves Ryu into the "Cool" position
 	$(document).keydown(function(event) {
@@ -43,16 +41,16 @@ $(document).ready(function () {
 		$('.ryu-cool').show();
 	  }
 	})
-
+//Ryu Leaves the "Cool position when the "x" key is released
 	.keyup(function(event) {
 		if (event.which == 88) {
-		$('.ryu-still').show();
+		$('.ryu-ready').show();
 		$('.ryu-cool').hide();  
 	  }
 	});
 
 });
-
+//Hadouken sound
 	function playHadouken () {
   		$('#hadouken-sound')[0].volume = 0.5;
   		$('#hadouken-sound')[0].load();
