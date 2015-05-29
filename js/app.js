@@ -10,12 +10,14 @@ $(document).ready(function () {
 	.mouseleave(function() {
 		$('.ryu-still').show();
 		$('.ryu-ready').hide();
+		$('.ryu-cool').hide();
 	})
 
 //Ryu moves into the "Throwing" positon when the mouse button is clicked
 	.mousedown(function() {
 		playHadouken();
 		$('.ryu-ready').hide();	
+		$('.ryu-cool').hide();
 		$('.ryu-throwing').show();
 		$('.hadouken').finish().show().animate(
   			{'left': '1145px'},
